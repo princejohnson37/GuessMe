@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/txtGuessTheNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guess the Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="133dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="30sp"
+        />
+
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="2"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:layout_below="@+id/txtGuessTheNumber"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextNumber"
+        android:text=""
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="60dp"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtClue"
+        android:layout_below="@+id/btnOk"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"
+        ></TextView>
+    <Button
+        android:id="@+id/btnOk"
+        android:onClick="btnOkClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:text="fuyguigbiulhbu"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Guess Me</string>
+    <string name="start">Start</string>
+    <string name="how_to_play">How to play</string>
+    <string name="rules">This app will generate a random number within 20.
+        Guess that number within 5 chances to win the game</string>
+</resources>
