@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +28,22 @@ public class StartActivity extends AppCompatActivity {
         number = findViewById(R.id.editTextNumber);
         clue = findViewById(R.id.txtClue);
         btnOk = findViewById(R.id.btnOk);
+        number.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                btnOk.setEnabled(!s.toString().isEmpty());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         guess = 1;
         gotIt = 0;
     }
@@ -35,9 +52,10 @@ public class StartActivity extends AppCompatActivity {
         return random.nextInt(21);
     }
 
-    public void btnOkClicked(View view){
+    public void btnOkClicked(View view) {
 
         int guessed_number = Integer.parseInt(number.getText().toString());
+
         if(guess < 5 && gotIt != 1) {
             if (random_number == guessed_number) {
                 Intent i = new Intent(this, won.class);
@@ -57,4 +75,5 @@ public class StartActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+
 }
