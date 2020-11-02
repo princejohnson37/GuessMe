@@ -27,7 +27,7 @@ public class StartActivity extends AppCompatActivity {
         number = findViewById(R.id.editTextNumber);
         clue = findViewById(R.id.txtClue);
         btnOk = findViewById(R.id.btnOk);
-        guess = 0;
+        guess = 1;
         gotIt = 0;
     }
     public int genRandomNumber(){
