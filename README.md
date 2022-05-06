@@ -1,3 +1,3 @@
 # GuessMe
 
-A sinmple andriod app game for guessing a random number.
+A simple andriod app game for guessing a random number.
